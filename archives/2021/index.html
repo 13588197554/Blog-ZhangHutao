@@ -473,6 +473,8 @@
         
           
         
+          
+        
       
     
     
@@ -486,26 +488,20 @@
   
     
     <h2 class="article-title" >
-      <a href="/posts/7065.html">
-        Git常用命令
+      <a href="/posts/40486.html">
+        Spring 事务
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Git常用命令一、本地操作：其它
-git init：初始化本地库
+        Spring的事务管理  Spring事务本质是对数据库事务的支持，如果数据库不支持事务（例如MySQL的MyISAM引擎不支持事务），则Spring事务也不会生效。
+  Spring 既支持编程式事务管理, 也支持声明式的事务管理.
 
-git status：查看工作区、暂存区的状态
+编程式事务管理将事务管理代码嵌入到业务方法中来控制事务的提交和回滚。在编程式管理事务时, 必须在每个事务操作中包含额外的事务管理代码。
 
-git add &lt;file name&gt;：将工作区的“新建/修改”添加到暂存区
-
-git rm --cached &lt;file name&gt;：移除暂存区的修改
-
-git commit &lt;file name&gt;：将暂存区的内容提交到本地库
-
-　　ti...
+声明式的事务管理它...
       
     
   </div>
@@ -513,15 +509,15 @@ git commit &lt;file name&gt;：将暂存区的内容提交到本地库
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-02-03</time>
+        <time>2021-03-08</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Git/">Git</a>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Spring/">Spring</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/7065.html'>
+          <a class='readmore' href='/posts/40486.html'>
             阅读全文
           </a>
         </div>
@@ -543,17 +539,30 @@ git commit &lt;file name&gt;：将暂存区的内容提交到本地库
   
     
     <h2 class="article-title" >
-      <a href="/posts/7735.html">
-        Git碰到的坑
+      <a href="/posts/63394.html">
+        数据库
       </a>
     </h2>
   
   <div class='md'>
     
       
-        凡走过，必留下痕迹。才过的坑，印记更深！！！
-Git 问题
-问题：用户名密码正确，但是报错用户名密码错误  remote: Invalid username or password  方案:  https://www.freesion.com/article/8250330335/  https://docs.github.com/en/github/authenticating-to-gi...
+        数据库事务Database 事务  
+
+
+Database 事务ACID特性  
+
+Spring 事务  
+
+面试 MySQL 事务
+
+索引MySQL 索引
+
+
+面试 MySQL 索引
+
+
+MVCC面试 MySQL MVCC
       
     
   </div>
@@ -561,15 +570,12 @@ Git 问题
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-02-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%97%AE%E9%A2%98/">问题</a><span class="sep"></span><a class="category-link" href="/categories/%E9%97%AE%E9%A2%98/Git/">Git</a>
+        <time>2021-03-07</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/7735.html'>
+          <a class='readmore' href='/posts/63394.html'>
             阅读全文
           </a>
         </div>
@@ -591,18 +597,16 @@ Git 问题
   
     
     <h2 class="article-title" >
-      <a href="/posts/45533.html">
-        Hexo 碰到的坑
+      <a href="/posts/58986.html">
+        MySQL 索引
       </a>
     </h2>
   
   <div class='md'>
     
       
-        凡走过，必留下痕迹。才过的坑，印记更深！！！
-Hexo 碰到的坑
-box 文件夹下index.html找不到
- 123456    hexo new page box      将box的page拷贝过来      hexo d      &#96;&#96;&#96;  2. 文件名修改，hexo d 推不上过去      Hexo 路径下&#96;deploy_git.git\confi...
+        一、索引概述1. 简介2. 索引的原理  MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，B+Tree索引，哈希索引，全文索引等等，
+哈希索引  只有memory（内存）存储引擎支持哈希索引，哈希索引用索引列的值计算该值的hashCode，然后在hashCode相应的位置存执该值所在行数据的物理位置，因为使用散列算法，...
       
     
   </div>
@@ -610,15 +614,15 @@ box 文件夹下index.html找不到
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-02-03</time>
+        <time>2021-03-06</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%97%AE%E9%A2%98/">问题</a><span class="sep"></span><a class="category-link" href="/categories/%E9%97%AE%E9%A2%98/Hexo/">Hexo</a>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/MySQL/">MySQL</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/45533.html'>
+          <a class='readmore' href='/posts/58986.html'>
             阅读全文
           </a>
         </div>
@@ -640,17 +644,17 @@ box 文件夹下index.html找不到
   
     
     <h2 class="article-title" >
-      <a href="/posts/63728.html">
-        Nginx 安装
+      <a href="/posts/28156.html">
+        Database 索引
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Docker 安装 Nginx检查镜像docker search nginx
-root@JD:~# docker search nginx  
-NAME                               DESCRIPTION                                     STARS               OFFICIAL            AU...
+        一、 数据库索引数据库索引定义  索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。
+  简而言之： 索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。
+数据库索引类别  数据库索引好比是一本书前面的目录，能加快数...
       
     
   </div>
@@ -658,15 +662,15 @@ NAME                               DESCRIPTION                                  
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-02-03</time>
+        <time>2021-03-06</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Ninx/">Ninx</a>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Database/">Database</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/63728.html'>
+          <a class='readmore' href='/posts/28156.html'>
             阅读全文
           </a>
         </div>
@@ -688,24 +692,18 @@ NAME                               DESCRIPTION                                  
   
     
     <h2 class="article-title" >
-      <a href="/posts/24585.html">
-        Git安装
+      <a href="/posts/2460.html">
+        面试 MySQL MVCC
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Git 安装本地安装 Git待补充
-服务器安装 Git
-安装 GitDebian或Ubuntu：apt-get install gitCentOS：yum install -y git安装完成，看版本：git --version
+        一、前提概要
+MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。MVCC是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。
 
-Git 使用
-
-
-
-添加用户信息useradd usernamepasswd password实例：
-12345useradd git -m  passwd gi...
+什么是MVCC?  MVCC在MySQL InnoDB中的实现主要是为了提高数据库并发性能，用更好的方式去处理读-写冲突，做到即使有读写冲突时，也能做到不加锁，非阻...
       
     
   </div>
@@ -713,15 +711,15 @@ Git 使用
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-02-03</time>
+        <time>2021-03-06</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Git/">Git</a>
+          <a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/">Database</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/">MySQL</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/24585.html'>
+          <a class='readmore' href='/posts/2460.html'>
             阅读全文
           </a>
         </div>
@@ -743,15 +741,17 @@ Git 使用
   
     
     <h2 class="article-title" >
-      <a href="/posts/23662.html">
-        Linux常用命令大全
+      <a href="/posts/43567.html">
+        面试 MySQL 索引
       </a>
     </h2>
   
   <div class='md'>
     
       
-        系统信息arch 显示机器的处理器架构uname -m 显示机器的处理器架构uname -r 显示正在使用的内核版本dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI)hdparm -i /dev/hda 罗列一个磁盘的架构特性hdparm -tT /dev/sda 在磁盘上执行测试性读取操作cat /proc/cpuinfo 显示CPU info的信息cat /pr...
+        MySQL 索引问答索引是什么？有什么作用？  MySQL索引是什么？MySQL索引有什么作用？  索引类似大学图书馆建书目索引，可以提高数据检索的效率，降低数据库的IO成本。MySQL官方文档说500~800w条记录左右性能开始逐渐下降，所以大数据量建立索引是非常有必要的。MySQL提供了Explain，用于显示SQL执行的详细信息，可以进行索引的优化。
+导致SQL执行慢的原因
+硬件问题。...
       
     
   </div>
@@ -759,15 +759,15 @@ Git 使用
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-01-28</time>
+        <time>2021-03-06</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Linux/">Linux</a>
+          <a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/MySQL/">MySQL</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/23662.html'>
+          <a class='readmore' href='/posts/43567.html'>
             阅读全文
           </a>
         </div>
@@ -789,20 +789,16 @@ Git 使用
   
     
     <h2 class="article-title" >
-      <a href="/posts/14870.html">
-        Jedis-Redis的Java的应用
+      <a href="/posts/29528.html">
+        面试 MySQL 事务
       </a>
     </h2>
   
   <div class='md'>
     
       
-        
-转载：Redis入门到精通-Redis与Java的应用
+        问题一：Mysql事务简介问题二：ACID简介问题三：ACID原理问题四：事务隔离级别问题五：Mysql的锁机制问题六：事务底层实现原理问题一：Mysql事务简介问题二：ACID简介问题三：ACID原理问题四：事务隔离级别问题五：Mysql的锁机制问题六：事务底层实现原理
 
-1. Jedis的使用Jedis就是redis支持java的第三方类库，我们可以使用Jedis类库操作redis数据库。
-​ 注意:Jedis2.7以上的版本才支持集群操作。
-1.1 Maven依赖12345&lt;dependency&gt;  &lt;groupId&gt;redis.clients&lt;/groupId&gt...
       
     
   </div>
@@ -810,15 +806,15 @@ Git 使用
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-01-20</time>
+        <time>2021-03-06</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Jedis/">Jedis</a>
+          <a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/">Database</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/">MySQL</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/14870.html'>
+          <a class='readmore' href='/posts/29528.html'>
             阅读全文
           </a>
         </div>
@@ -840,23 +836,19 @@ Git 使用
   
     
     <h2 class="article-title" >
-      <a href="/posts/1928.html">
-        Redis搭建及使用
+      <a href="/posts/45033.html">
+        Database 事务ACID特性
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Docker 安装 Redis
-系统环境：16.04.1-Ubuntu uname -a
+        
+事务的ACID特性
+原子性(Atomicity): 事务中的所有操作作为一个整体像原子一样不可分割，要么全部成功,要么全部失败。
 
-获取 Redis 镜像 docker images #检查是否存在redis镜像
-
-
-
-若已存在镜像  docker ps -a -q #查看镜像是否在运行  docker exec -it redis_test redis-server -v  #redis_test 是运行redis名称
-若不存在...
+一致性(Consistency): 事务的执行结果必须使数据库从一个一致性状态到另一个一致性状态。一致性状态是指:1.系统的状态满足数据的完整性约束(主码,参照完整性,check约束等) 2.系统的状态反应数据库本应描述的现实世界的真实状态,比如转账前后两个账...
       
     
   </div>
@@ -864,15 +856,15 @@ Git 使用
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-01-20</time>
+        <time>2021-03-06</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Redis/">Redis</a>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Database/">Database</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/1928.html'>
+          <a class='readmore' href='/posts/45033.html'>
             阅读全文
           </a>
         </div>
@@ -894,16 +886,19 @@ Git 使用
   
     
     <h2 class="article-title" >
-      <a href="/posts/16107.html">
-        Hello World
+      <a href="/posts/46219.html">
+        Database 事务
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+        一、 数据库事务数据库事务定义数据库事务(transaction)是访问并可能操作各种数据项的一个数据库操作序列，这些操作要么全部执行,要么全部不执行，是一个不可分割的工作单位。事务由事务开始与事务结束之间执行的全部数据库操作组成。
+解析：
+
+Transaction
+事务就是一段sql 语句的批处理，但是这个批处理是一个atom（原子），不可分割，要么都执行，要么回滚（rollback）都不...
       
     
   </div>
@@ -911,12 +906,70 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-01-20</time>
+        <time>2021-03-06</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Database/">Database</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/posts/16107.html'>
+          <a class='readmore' href='/posts/46219.html'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/posts/57711.html">
+        GitHub
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        注册 Github 账户
+GitHub官网点击此处 ，点击 Sign Up 注册账户
+
+创建项目代码库
+页面左侧 Repository 点击按钮New步骤及注意事项见下图：
+
+Git 免密登陆
+右键，Git Bash1$ ls -al ~&#x2F;.ssh
+如果没有，执行下一步。
+新建 SSH Key1$ ssh-keygen -t rsa -C &quot;your email@exam...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-02-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/GitHub/">GitHub</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/posts/57711.html'>
             阅读全文
           </a>
         </div>
@@ -932,6 +985,21 @@ Qu...
     
   </section>
   
+    
+      <br>
+      <div class="prev-next">
+        
+        <p class="current">
+          1 / 3
+        </p>
+        
+          <a class="next" rel="next" href="/archives/2021/page/2/">
+            <section class="post next white-box shadow">
+              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
+        
+      </div>
     
   
 
@@ -1020,12 +1088,27 @@ Qu...
           <li><a class="flat-box"
             title="/categories/%E6%95%99%E7%A8%8B/" href="/categories/%E6%95%99%E7%A8%8B/"
             id="categoriesE69599E7A88B"
-            ><div class='name'>教程</div><div class='badge'>(6)</div></a></li>
+            ><div class='name'>教程</div><div class='badge'>(14)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E6%95%99%E7%A8%8B/Blog/" href="/categories/%E6%95%99%E7%A8%8B/Blog/"
+            id="categoriesE69599E7A88BBlog"
+            ><div class='name'>Blog</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E6%95%99%E7%A8%8B/Database/" href="/categories/%E6%95%99%E7%A8%8B/Database/"
+            id="categoriesE69599E7A88BDatabase"
+            ><div class='name'>Database</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E6%95%99%E7%A8%8B/Git/" href="/categories/%E6%95%99%E7%A8%8B/Git/"
             id="categoriesE69599E7A88BGit"
             ><div class='name'>Git</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E6%95%99%E7%A8%8B/GitHub/" href="/categories/%E6%95%99%E7%A8%8B/GitHub/"
+            id="categoriesE69599E7A88BGitHub"
+            ><div class='name'>GitHub</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E6%95%99%E7%A8%8B/Jedis/" href="/categories/%E6%95%99%E7%A8%8B/Jedis/"
@@ -1038,6 +1121,11 @@ Qu...
             ><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box child"
+            title="/categories/%E6%95%99%E7%A8%8B/MySQL/" href="/categories/%E6%95%99%E7%A8%8B/MySQL/"
+            id="categoriesE69599E7A88BMySQL"
+            ><div class='name'>MySQL</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
             title="/categories/%E6%95%99%E7%A8%8B/Ninx/" href="/categories/%E6%95%99%E7%A8%8B/Ninx/"
             id="categoriesE69599E7A88BNinx"
             ><div class='name'>Ninx</div><div class='badge'>(1)</div></a></li>
@@ -1046,6 +1134,11 @@ Qu...
             title="/categories/%E6%95%99%E7%A8%8B/Redis/" href="/categories/%E6%95%99%E7%A8%8B/Redis/"
             id="categoriesE69599E7A88BRedis"
             ><div class='name'>Redis</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E6%95%99%E7%A8%8B/Spring/" href="/categories/%E6%95%99%E7%A8%8B/Spring/"
+            id="categoriesE69599E7A88BSpring"
+            ><div class='name'>Spring</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E9%97%AE%E9%A2%98/" href="/categories/%E9%97%AE%E9%A2%98/"
@@ -1061,6 +1154,26 @@ Qu...
             title="/categories/%E9%97%AE%E9%A2%98/Hexo/" href="/categories/%E9%97%AE%E9%A2%98/Hexo/"
             id="categoriesE997AEE9A298Hexo"
             ><div class='name'>Hexo</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E9%9D%A2%E8%AF%95/" href="/categories/%E9%9D%A2%E8%AF%95/"
+            id="categoriesE99DA2E8AF95"
+            ><div class='name'>面试</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E9%9D%A2%E8%AF%95/Database/" href="/categories/%E9%9D%A2%E8%AF%95/Database/"
+            id="categoriesE99DA2E8AF95Database"
+            ><div class='name'>Database</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/" href="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/"
+            id="categoriesE99DA2E8AF95DatabaseMySQL"
+            ><div class='name'>MySQL</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E9%9D%A2%E8%AF%95/MySQL/" href="/categories/%E9%9D%A2%E8%AF%95/MySQL/"
+            id="categoriesE99DA2E8AF95MySQL"
+            ><div class='name'>MySQL</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -1084,7 +1197,7 @@ Qu...
 
 
     <div class='content'>
-      <a href="/tags/Docker/" style="font-size: 19px; color: #777">Docker</a> <a href="/tags/Git/" style="font-size: 24px; color: #555">Git</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/Jedis/" style="font-size: 14px; color: #999">Jedis</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Redis/" style="font-size: 19px; color: #777">Redis</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 19px; color: #777">命令</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">服务器</a> <a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 19px; color: #777">问题</a>
+      <a href="/tags/ACID/" style="font-size: 14px; color: #999">ACID</a> <a href="/tags/Database/" style="font-size: 20.67px; color: #6c6c6c">Database</a> <a href="/tags/Docker/" style="font-size: 17.33px; color: #828282">Docker</a> <a href="/tags/Git/" style="font-size: 24px; color: #555">Git</a> <a href="/tags/GitHub/" style="font-size: 14px; color: #999">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/Index/" style="font-size: 20.67px; color: #6c6c6c">Index</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/Jedis/" style="font-size: 14px; color: #999">Jedis</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MVCC/" style="font-size: 14px; color: #999">MVCC</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Redis/" style="font-size: 17.33px; color: #828282">Redis</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/Transaction/" style="font-size: 20.67px; color: #6c6c6c">Transaction</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 20.67px; color: #6c6c6c">事务</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">优化</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 17.33px; color: #828282">命令</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">服务器</a> <a href="/tags/%E7%B4%A2%E5%BC%95/" style="font-size: 20.67px; color: #6c6c6c">索引</a> <a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 17.33px; color: #828282">问题</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 20.67px; color: #6c6c6c">面试</a>
     </div>
   </section>
 
