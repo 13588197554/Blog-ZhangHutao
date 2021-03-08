@@ -518,7 +518,73 @@
 
 
   
-  <h3 id="问题一：Mysql事务简介"><a href="#问题一：Mysql事务简介" class="headerlink" title="问题一：Mysql事务简介"></a>问题一：Mysql事务简介</h3><h3 id="问题二：ACID简介"><a href="#问题二：ACID简介" class="headerlink" title="问题二：ACID简介"></a>问题二：ACID简介</h3><h3 id="问题三：ACID原理"><a href="#问题三：ACID原理" class="headerlink" title="问题三：ACID原理"></a>问题三：ACID原理</h3><h3 id="问题四：事务隔离级别"><a href="#问题四：事务隔离级别" class="headerlink" title="问题四：事务隔离级别"></a>问题四：事务隔离级别</h3><h3 id="问题五：Mysql的锁机制"><a href="#问题五：Mysql的锁机制" class="headerlink" title="问题五：Mysql的锁机制"></a>问题五：Mysql的锁机制</h3><h3 id="问题六：事务底层实现原理"><a href="#问题六：事务底层实现原理" class="headerlink" title="问题六：事务底层实现原理"></a>问题六：事务底层实现原理</h3><p><strong>问题一：Mysql事务简介</strong><br><strong>问题二：ACID简介</strong><br><strong>问题三：ACID原理</strong><br><strong>问题四：事务隔离级别</strong><br><strong>问题五：Mysql的锁机制</strong><br><strong>问题六：事务底层实现原理</strong></p>
+  <h5 id="什么是事务？"><a href="#什么是事务？" class="headerlink" title="什么是事务？"></a>什么是事务？</h5><p>  事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行的结果必须使数据库从一种一致性状态变到另一种一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。</p>
+<p>  事务最经典也经常被拿出来说例子就是转账了。</p>
+<p>  假如小明要给小红转账1000元，这个转账会涉及到两个关键操作就是：将小明的余额减少1000元，将小红的余额增加1000元。万一在这两个操作之间突然出现错误比如银行系统崩溃，导致小明余额减少而小红的余额没有增加，这样就不对了。事务就是保证这两个关键操作要么都成功，要么都要失败。</p>
+<h5 id="事物的四大特性ACID介绍一下？"><a href="#事物的四大特性ACID介绍一下？" class="headerlink" title="事物的四大特性ACID介绍一下？"></a>事物的四大特性ACID介绍一下？</h5><ul>
+<li><p>原子性： 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；</p>
+</li>
+<li><p>一致性： 执行事务前后，数据保持一致，多个事务对同一个数据读取的结果是相同的；</p>
+</li>
+<li><p>隔离性： 并发访问数据库时，一个用户的事务不被其他事务所干扰，各并发事务之间数据库是独立的；</p>
+</li>
+<li><p>持久性： 一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。</p>
+</li>
+</ul>
+<h5 id="什么是脏读？幻读？不可重复读？"><a href="#什么是脏读？幻读？不可重复读？" class="headerlink" title="什么是脏读？幻读？不可重复读？"></a>什么是脏读？幻读？不可重复读？</h5><ul>
+<li><p>脏读(Drity Read)：某个事务已更新一份数据，另一个事务在此时读取了同一份数据，由于某些原因，前一个RollBack了操作，则后一个事务所读取的数据就会是不正确的。</p>
+</li>
+<li><p>不可重复读(Non-repeatable read):在一个事务的两次查询之中数据不一致，这可能是两次查询过程中间插入了一个事务更新的原有的数据。</p>
+</li>
+<li><p>幻读(Phantom Read):在一个事务的两次查询中数据笔数不一致，例如有一个事务查询了几列(Row)数据，而另一个事务却在此时插入了新的几列数据，先前的事务在接下来的查询中，就会发现有几列数据是它先前所没有的。</p>
+</li>
+</ul>
+<h5 id="什么是事务的隔离级别？MySQL的默认隔离级别是什么？"><a href="#什么是事务的隔离级别？MySQL的默认隔离级别是什么？" class="headerlink" title="什么是事务的隔离级别？MySQL的默认隔离级别是什么？"></a>什么是事务的隔离级别？MySQL的默认隔离级别是什么？</h5><p>  为了达到事务的四大特性，数据库定义了4种不同的事务隔离级别，由低到高依次为Read uncommitted、Read committed、Repeatable read、Serializable，这四个级别可以逐个解决脏读、不可重复读、幻读这几类问题。</p>
+<table>
+<thead>
+<tr>
+<th align="center">隔离级别</th>
+<th align="center">脏读</th>
+<th align="center">不可重复读</th>
+<th align="center">幻影读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">READ-UNCOMMITTED</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">READ-COMMITTED</td>
+<td align="center"></td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">REPEATABLE-READ</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">SERIALIZABLE</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>  SQL 标准定义了四个隔离级别：</p>
+<ul>
+<li><p>READ-UNCOMMITTED(<strong>读取未提交</strong>)： 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读。</p>
+</li>
+<li><p>READ-COMMITTED(<strong>读取已提交</strong>)： 允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生。</p>
+</li>
+<li><p>REPEATABLE-READ(<strong>可重复读</strong>)： 对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。</p>
+</li>
+<li><p>SERIALIZABLE(<strong>可串行化</strong>)： 最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。</p>
+</li>
+</ul>
 
   
   
@@ -553,10 +619,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-07T17:10:52+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-08T23:23:43+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2021年3月7日</p>
+    <p>更新于：2021年3月8日</p>
   </a>
 </div>
 
@@ -634,7 +700,8 @@
       
         <a class='prev' href='/posts/43567.html'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>面试 MySQL 索引</p>
-          <p class='content'>MySQL 索引问答索引是什么？有什么作用？  MySQL索引是什么？MySQL索引有什么作用？  索引类似大学图书馆建书目索引，可以提高数据检索的效率，降低数据库的IO成本。MySQL官方文档...</p>
+          <p class='content'>什么是索引？  索引是一种数据结构。数据库索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。索引的实现通常使用B树及其变种B+树。
+  索引是一种特殊的文件(Inn...</p>
         </a>
       
       
@@ -687,7 +754,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80%EF%BC%9AMysql%E4%BA%8B%E5%8A%A1%E7%AE%80%E4%BB%8B"><span class="toc-text">问题一：Mysql事务简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E4%BA%8C%EF%BC%9AACID%E7%AE%80%E4%BB%8B"><span class="toc-text">问题二：ACID简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E4%B8%89%EF%BC%9AACID%E5%8E%9F%E7%90%86"><span class="toc-text">问题三：ACID原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%9B%9B%EF%BC%9A%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-text">问题四：事务隔离级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E4%BA%94%EF%BC%9AMysql%E7%9A%84%E9%94%81%E6%9C%BA%E5%88%B6"><span class="toc-text">问题五：Mysql的锁机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%85%AD%EF%BC%9A%E4%BA%8B%E5%8A%A1%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">问题六：事务底层实现原理</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%8B%E5%8A%A1%EF%BC%9F"><span class="toc-text">什么是事务？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8B%E7%89%A9%E7%9A%84%E5%9B%9B%E5%A4%A7%E7%89%B9%E6%80%A7ACID%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B%EF%BC%9F"><span class="toc-text">事物的四大特性ACID介绍一下？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%84%8F%E8%AF%BB%EF%BC%9F%E5%B9%BB%E8%AF%BB%EF%BC%9F%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB%EF%BC%9F"><span class="toc-text">什么是脏读？幻读？不可重复读？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%EF%BC%9FMySQL%E7%9A%84%E9%BB%98%E8%AE%A4%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">什么是事务的隔离级别？MySQL的默认隔离级别是什么？</span></a></li></ol>
     </div>
   </section>
 

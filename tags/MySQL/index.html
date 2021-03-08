@@ -582,9 +582,9 @@ MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。
   <div class='md'>
     
       
-        MySQL 索引问答索引是什么？有什么作用？  MySQL索引是什么？MySQL索引有什么作用？  索引类似大学图书馆建书目索引，可以提高数据检索的效率，降低数据库的IO成本。MySQL官方文档说500~800w条记录左右性能开始逐渐下降，所以大数据量建立索引是非常有必要的。MySQL提供了Explain，用于显示SQL执行的详细信息，可以进行索引的优化。
-导致SQL执行慢的原因
-硬件问题。...
+        什么是索引？  索引是一种数据结构。数据库索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。索引的实现通常使用B树及其变种B+树。
+  索引是一种特殊的文件(InnoDB数据表上的索引是表空间的一个组成部分)，它们包含着对数据表里所有记录的引用指针。
+  更通俗的说，索引就相当于目录。为了方便查找书中的内容，通过对内容建立索引形成目录。索引是一个文件，它是要占据...
       
     
   </div>
@@ -630,8 +630,9 @@ MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。
   <div class='md'>
     
       
-        问题一：Mysql事务简介问题二：ACID简介问题三：ACID原理问题四：事务隔离级别问题五：Mysql的锁机制问题六：事务底层实现原理问题一：Mysql事务简介问题二：ACID简介问题三：ACID原理问题四：事务隔离级别问题五：Mysql的锁机制问题六：事务底层实现原理
-
+        什么是事务？  事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行的结果必须使数据库从一种一致性状态变到另一种一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。
+  事务最经典也经常被拿出来说例子就是转账了。
+  假如小明要给小红转账1000元，这个转账会涉及到两个关键操作就是：将小明的余额减少1000元，将小红的余额增加1000元。万一在这两个操作之间突然...
       
     
   </div>
@@ -822,12 +823,12 @@ MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。
           <li><a class="flat-box"
             title="/categories/%E9%9D%A2%E8%AF%95/" href="/categories/%E9%9D%A2%E8%AF%95/"
             id="categoriesE99DA2E8AF95"
-            ><div class='name'>面试</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>面试</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E9%9D%A2%E8%AF%95/Database/" href="/categories/%E9%9D%A2%E8%AF%95/Database/"
             id="categoriesE99DA2E8AF95Database"
-            ><div class='name'>Database</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>Database</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/" href="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/"
@@ -861,7 +862,7 @@ MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。
 
 
     <div class='content'>
-      <a href="/tags/ACID/" style="font-size: 14px; color: #999">ACID</a> <a href="/tags/Database/" style="font-size: 20.67px; color: #6c6c6c">Database</a> <a href="/tags/Docker/" style="font-size: 17.33px; color: #828282">Docker</a> <a href="/tags/Git/" style="font-size: 24px; color: #555">Git</a> <a href="/tags/GitHub/" style="font-size: 14px; color: #999">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/Index/" style="font-size: 20.67px; color: #6c6c6c">Index</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/Jedis/" style="font-size: 14px; color: #999">Jedis</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MVCC/" style="font-size: 14px; color: #999">MVCC</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Redis/" style="font-size: 17.33px; color: #828282">Redis</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/Transaction/" style="font-size: 20.67px; color: #6c6c6c">Transaction</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 20.67px; color: #6c6c6c">事务</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">优化</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 17.33px; color: #828282">命令</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">服务器</a> <a href="/tags/%E7%B4%A2%E5%BC%95/" style="font-size: 20.67px; color: #6c6c6c">索引</a> <a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 17.33px; color: #828282">问题</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 20.67px; color: #6c6c6c">面试</a>
+      <a href="/tags/ACID/" style="font-size: 14px; color: #999">ACID</a> <a href="/tags/Database/" style="font-size: 24px; color: #555">Database</a> <a href="/tags/Docker/" style="font-size: 17.33px; color: #828282">Docker</a> <a href="/tags/Git/" style="font-size: 24px; color: #555">Git</a> <a href="/tags/GitHub/" style="font-size: 14px; color: #999">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/Index/" style="font-size: 20.67px; color: #6c6c6c">Index</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/Jedis/" style="font-size: 14px; color: #999">Jedis</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MVCC/" style="font-size: 14px; color: #999">MVCC</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Redis/" style="font-size: 17.33px; color: #828282">Redis</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/Transaction/" style="font-size: 20.67px; color: #6c6c6c">Transaction</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 20.67px; color: #6c6c6c">事务</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">优化</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 17.33px; color: #828282">命令</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 14px; color: #999">基础</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">服务器</a> <a href="/tags/%E7%B4%A2%E5%BC%95/" style="font-size: 20.67px; color: #6c6c6c">索引</a> <a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 17.33px; color: #828282">问题</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 20.67px; color: #6c6c6c">面试</a>
     </div>
   </section>
 

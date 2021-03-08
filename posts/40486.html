@@ -518,13 +518,14 @@
 
 
   
-  <h3 id="Spring的事务管理"><a href="#Spring的事务管理" class="headerlink" title="Spring的事务管理"></a>Spring的事务管理</h3><p>  Spring事务本质是对数据库事务的支持，如果数据库不支持事务（例如MySQL的MyISAM引擎不支持事务），则Spring事务也不会生效。</p>
+  <p>[TOC]</p>
+<h3 id="Spring的事务管理"><a href="#Spring的事务管理" class="headerlink" title="Spring的事务管理"></a>Spring的事务管理</h3><p>  Spring事务本质是对数据库事务的支持，如果数据库不支持事务（例如MySQL的MyISAM引擎不支持事务），则Spring事务也不会生效。</p>
 <p>  Spring 既支持<font color=red>编程式事务管理</font>, 也支持<font color=red>声明式的事务管理</font>.</p>
 <ul>
-<li><p>编程式事务管理<br>将事务管理代码嵌入到业务方法中来控制事务的提交和回滚。在编程式管理事务时, 必须在每个事务操作中包含额外的事务管理代码。</p>
-</li>
-<li><p>声明式的事务管理<br>它将事务管理代码从业务方法中分离出来, 以声明的方式来实现事务管理。事务管理作为一种横切关注点, 可以通过 AOP 方法模块化。Spring 通过 Spring AOP 框架支持声明式事务管理。</p>
-</li>
+<li>编程式事务管理<br>将事务管理代码嵌入到业务方法中来控制事务的提交和回滚。在编程式管理事务时, 必须在每个事务操作中包含额外的事务管理代码。</li>
+</ul>
+<ul>
+<li>声明式的事务管理<br>它将事务管理代码从业务方法中分离出来, 以声明的方式来实现事务管理。事务管理作为一种横切关注点, 可以通过 AOP 方法模块化。Spring 通过 Spring AOP 框架支持声明式事务管理。</li>
 </ul>
 <p>  <strong>Spring事务管理</strong><br>  Spring并不直接管理事务，而是提供了多种事务管理器，他们将事务管理的职责委托给Hibernate或者JTA等持久化机制所提供的相关平台框架的事务来实现。</p>
 <p>  Spring事务管理器的接口是org.springframework.transaction.PlatformTransactionManager，通过这个接口，Spring为各个平台如JDBC、Hibernate等都提供了对应的事务管理器，但是具体的实现就是各个平台自己的事情了。</p>
@@ -532,15 +533,15 @@
 <p>  <img src="https://cdn.jsdelivr.net/gh/hutaozhang/CDN/blog/images/spring-transaction-structure.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/hutaozhang/CDN/blog/images/spring-transaction-structure.png" srcset="data:image/png;base64,666" alt="Spring事务结构图"></p>
 <p>  此接口的内容如下：<br>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Public interface <span class="title">PlatformTransactionManager</span><span class="params">()</span>  </span>&#123;  </span><br><span class="line"><span class="comment">// 由TransactionDefinition得到TransactionStatus对象</span></span><br><span class="line"> <span class="function">TransactionStatus <span class="title">getTransaction</span><span class="params">(TransactionDefinition definition)</span> <span class="keyword">throws</span> TransactionException</span>; </span><br><span class="line"> <span class="comment">// 提交</span></span><br><span class="line"> <span class="function">Void <span class="title">commit</span><span class="params">(TransactionStatus status)</span> <span class="keyword">throws</span> TransactionException</span>;  </span><br><span class="line"> <span class="comment">// 回滚</span></span><br><span class="line"> <span class="function">Void <span class="title">rollback</span><span class="params">(TransactionStatus status)</span> <span class="keyword">throws</span> TransactionException</span>;  </span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure><br>  从这里可知具体的具体的事务管理机制对Spring来说是透明的，它并不关心那些，那些是对应各个平台需要关心的，所以Spring事务管理的一个优点就是为不同的事务API提供一致的编程模型，如JTA、JDBC、Hibernate、JPA。</p>
 <p>  运行流程示例如下：<br>  <img src="https://cdn.jsdelivr.net/gh/hutaozhang/CDN/blog/images/spring-transaction-running.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/hutaozhang/CDN/blog/images/spring-transaction-running.png" srcset="data:image/png;base64,666" alt="Spring事务运行流程图"></p>
-<h4 id="Spring-中的事务管理器的不同实现"><a href="#Spring-中的事务管理器的不同实现" class="headerlink" title="Spring 中的事务管理器的不同实现"></a>Spring 中的事务管理器的不同实现</h4><p>  ① DataSourceTransactionManager<br>  在应用程序中只需要处理一个数据源，而且通过JDBC存取。<br>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;transactionManager&quot;</span>     </span></span><br><span class="line"><span class="tag">	   <span class="attr">class</span>=<span class="string">&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dataSource&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;dataSource&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure><br>  实际上，DataSourceTransactionManager是通过调用java.sql.Connection来管理事务，而后者是通过DataSource获取到的。通过调用连接的commit()方法来提交事务，同样，事务失败则通过调用rollback()方法进行回滚。</p>
+<h4 id="事务管理器的不同实现"><a href="#事务管理器的不同实现" class="headerlink" title="事务管理器的不同实现"></a>事务管理器的不同实现</h4><p>  ① DataSourceTransactionManager<br>  在应用程序中只需要处理一个数据源，而且通过JDBC存取。<br>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;transactionManager&quot;</span>     </span></span><br><span class="line"><span class="tag">	   <span class="attr">class</span>=<span class="string">&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dataSource&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;dataSource&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure><br>  实际上，DataSourceTransactionManager是通过调用java.sql.Connection来管理事务，而后者是通过DataSource获取到的。通过调用连接的commit()方法来提交事务，同样，事务失败则通过调用rollback()方法进行回滚。</p>
 <p>  ② JtaTransactionManager<br>  在JAVAEE应用服务器上用JTA(Java Transaction API)进行事务管理。</p>
 <p>  ③ HibernateTransactionManager<br>  如果应用程序的持久化是通过Hibernate实习的，那么你需要使用HibernateTransactionManager。</p>
 <p>  对于Hibernate3，需要在Spring上下文定义中添加如下的<code>&lt;bean&gt;</code>声明：<br>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;transactionManager&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">class</span>=<span class="string">&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;sessionFactory&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;sessionFactory&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure><br>  sessionFactory属性需要装配一个Hibernate的session工厂，HibernateTransactionManager的实现细节是它将事务管理的职责委托org.hibernate.Transaction对象，而后者是从Hibernate Session中获取到的。</p>
 <p>  当事务成功完成时，HibernateTransactionManager将会调用Transaction对象的commit()方法，反之，将会调用rollback()方法。</p>
-<h4 id="Spring用事务通知声明式地管理事务"><a href="#Spring用事务通知声明式地管理事务" class="headerlink" title="Spring用事务通知声明式地管理事务"></a>Spring用事务通知声明式地管理事务</h4><p>  事务管理是一种横切关注点</p>
+<h4 id="声明式的事务管理"><a href="#声明式的事务管理" class="headerlink" title="声明式的事务管理"></a>声明式的事务管理</h4><p>  事务管理是一种横切关注点</p>
 <p>  ① <code>&lt;tx:advice&gt;</code> 元素定义<br>  为了在 Spring 2.x 中启用声明式事务管理, 可以通过 tx Schema 中定义的 <code>&lt;tx:advice&gt;</code> 元素声明事务通知, 为此必须事先将这个 Schema 定义添加到 <code>&lt;beans&gt;</code> 根元素中去。<br>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tx:advice</span> <span class="attr">id</span>=<span class="string">&quot;txadvice&quot;</span> <span class="attr">transaction-manager</span>=<span class="string">&quot;transactionManager&quot;</span> &gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- 根据方法名指定事务的属性 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;purchase&quot;</span> <span class="attr">propagation</span>=<span class="string">&quot;REQUIRES_NEW&quot;</span> <span class="attr">isolation</span>=<span class="string">&quot;READ_COMMITTED&quot;</span>  /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">&quot;*&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tx:advice</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>  ② 声明了事务通知后, 就需要将它与切入点关联起来.<br>  由于事务通知是在 <a href="aop:config">aop:config</a> 元素外部声明的, 所以它无法直接与切入点产生关联. 所以必须在<a href="aop:config">aop:config</a> 元素中声明一个增强器通知与切入点关联起来.<br>  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">advice-ref</span>=<span class="string">&quot;txadvice&quot;</span> <span class="attr">pointcut-ref</span>=<span class="string">&quot;txPointCut&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><br>  由于 Spring AOP 是基于代理的方法, 所以只能增强公共方法. 因此, 只有公有方法才能通过 Spring AOP 进行事务管理。</p>
-<h4 id="Spring的事务传播"><a href="#Spring的事务传播" class="headerlink" title="Spring的事务传播"></a>Spring的事务传播</h4><p>  事务传播行为是指一个事务方法A被另一个事务方法B调用时，这个事务A应该如何处理。事务A应该在事务B中运行还是另起一个事务，这个有事务A的传播行为决定。</p>
+<h3 id="Spring事务传播"><a href="#Spring事务传播" class="headerlink" title="Spring事务传播"></a>Spring事务传播</h3><p>  事务传播行为是指一个事务方法A被另一个事务方法B调用时，这个事务A应该如何处理。事务A应该在事务B中运行还是另起一个事务，这个有事务A的传播行为决定。</p>
 <p>  事务传播属性定义<code>TransactionDefinition</code><br>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> PROPAGATION_REQUIRED = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> PROPAGATION_SUPPORTS = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> PROPAGATION_MANDATORY = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">int</span> PROPAGATION_REQUIRES_NEW = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> PROPAGATION_NOT_SUPPORTED = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> PROPAGATION_NEVER = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> PROPAGATION_NESTED = <span class="number">6</span>;</span><br></pre></td></tr></table></figure></p>
 <table>
 <thead>
@@ -623,7 +624,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-08T19:10:55+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-08T19:54:04+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2021年3月8日</p>
@@ -702,6 +703,20 @@
   
     <div class="prev-next">
       
+        <a class='prev' href='/posts/25491.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>面试 Database 基础</p>
+          <p class='content'>为什么使用数据库？
+数据保存在内存
+优点： 存取速度快
+缺点： 数据不能永久保存
+
+数据保存在文件
+优点： 数据永久保存
+缺点：1）速度比内存操作慢，频繁的IO操作。2）查询数据不方便
+
+数据保...</p>
+        </a>
+      
       
         <a class='next' href='/posts/63394.html'>
           <p class='title'>数据库<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
@@ -763,7 +778,7 @@ MV...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-text">Spring的事务管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring-%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E4%B8%8D%E5%90%8C%E5%AE%9E%E7%8E%B0"><span class="toc-text">Spring 中的事务管理器的不同实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring%E7%94%A8%E4%BA%8B%E5%8A%A1%E9%80%9A%E7%9F%A5%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%9C%B0%E7%AE%A1%E7%90%86%E4%BA%8B%E5%8A%A1"><span class="toc-text">Spring用事务通知声明式地管理事务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring%E7%9A%84%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD"><span class="toc-text">Spring的事务传播</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-text">Spring事务的隔离级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E4%BA%8B%E5%8A%A1%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E6%A0%B7%E4%BE%8B"><span class="toc-text">Spring事务基本配置样例</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-text">Spring的事务管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8%E7%9A%84%E4%B8%8D%E5%90%8C%E5%AE%9E%E7%8E%B0"><span class="toc-text">事务管理器的不同实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E%E5%BC%8F%E7%9A%84%E4%BA%8B%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-text">声明式的事务管理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E4%BA%8B%E5%8A%A1%E4%BC%A0%E6%92%AD"><span class="toc-text">Spring事务传播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-text">Spring事务的隔离级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring%E4%BA%8B%E5%8A%A1%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E6%A0%B7%E4%BE%8B"><span class="toc-text">Spring事务基本配置样例</span></a></li></ol>
     </div>
   </section>
 
