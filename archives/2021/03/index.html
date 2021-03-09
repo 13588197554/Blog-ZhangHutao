@@ -488,6 +488,201 @@
   
     
     <h2 class="article-title" >
+      <a href="/posts/12443.html">
+        Java源码-ThreadPoolExecutor-03重要方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        ThreadPoolExecutor中重要方法任务提交主逻辑：execute()
+  execute()源码
+  
+  public void execute(Runnable command) {
+      if (command == null)
+          throw new NullPointerException();
+      /*
+       * Proceed ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/posts/12443.html'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/posts/52671.html">
+        Java源码-ThreadPoolExecutor-02构造函数
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        ThreadPoolExecutor中的构造函数ThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue)ThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue, RejectedExecutionHandler)ThreadPoolExecutor(int, int, ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/posts/52671.html'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/posts/31498.html">
+        Java源码-ThreadPoolExecutor-01成员变量
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        ThreadPoolExecutor中的重要成员变量AtomicInteger ctl  1private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));
+  AtomicInteger类型的ctl代表了ThreadPoolExecutor中的控制状态，它是一个复核类型的成员变量，是一个原子整数，借助高低位包装了...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/posts/31498.html'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/posts/36639.html">
+        Java源码-ThreadPoolExecuto
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        
+别说话，开抄！！！先赞后看，参考一下大神文章：ThreadPoolExecutor源码分析（一）：重要成员变量深入理解Java线程池：ThreadPoolExecutor
+
+ThreadPoolExecutor Demo  没看过源码，写个Demo压压惊~  123456789101112131415161718192021222324252627282930313233343536373...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-03-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/posts/36639.html'>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
       <a href="/posts/25491.html">
         面试 Database 基础
       </a>
@@ -795,205 +990,24 @@ MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/43567.html">
-        面试 MySQL 索引
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        什么是索引？  索引是一种数据结构。数据库索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。索引的实现通常使用B树及其变种B+树。
-  索引是一种特殊的文件(InnoDB数据表上的索引是表空间的一个组成部分)，它们包含着对数据表里所有记录的引用指针。
-  更通俗的说，索引就相当于目录。为了方便查找书中的内容，通过对内容建立索引形成目录。索引是一个文件，它是要占据...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/MySQL/">MySQL</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/43567.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/29528.html">
-        面试 MySQL 事务
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        什么是事务？  事务是一个不可分割的数据库操作序列，也是数据库并发控制的基本单位，其执行的结果必须使数据库从一种一致性状态变到另一种一致性状态。事务是逻辑上的一组操作，要么都执行，要么都不执行。
-  事务最经典也经常被拿出来说例子就是转账了。
-  假如小明要给小红转账1000元，这个转账会涉及到两个关键操作就是：将小明的余额减少1000元，将小红的余额增加1000元。万一在这两个操作之间突然...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/">Database</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/">MySQL</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/29528.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/45033.html">
-        Database 事务ACID特性
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        
-事务的ACID特性
-原子性(Atomicity): 事务中的所有操作作为一个整体像原子一样不可分割，要么全部成功,要么全部失败。
-
-一致性(Consistency): 事务的执行结果必须使数据库从一个一致性状态到另一个一致性状态。一致性状态是指:1.系统的状态满足数据的完整性约束(主码,参照完整性,check约束等) 2.系统的状态反应数据库本应描述的现实世界的真实状态,比如转账前后两个账...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Database/">Database</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/45033.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/46219.html">
-        Database 事务
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        一、 数据库事务数据库事务定义数据库事务(transaction)是访问并可能操作各种数据项的一个数据库操作序列，这些操作要么全部执行,要么全部不执行，是一个不可分割的工作单位。事务由事务开始与事务结束之间执行的全部数据库操作组成。
-解析：
-
-Transaction
-事务就是一段sql 语句的批处理，但是这个批处理是一个atom（原子），不可分割，要么都执行，要么回滚（rollback）都不...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Database/">Database</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/46219.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
+    
+      <br>
+      <div class="prev-next">
+        
+        <p class="current">
+          1 / 2
+        </p>
+        
+          <a class="next" rel="next" href="/archives/2021/03/page/2/">
+            <section class="post next white-box shadow">
+              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
+        
+      </div>
     
   
 
@@ -1082,7 +1096,7 @@ Transaction
           <li><a class="flat-box"
             title="/categories/%E6%95%99%E7%A8%8B/" href="/categories/%E6%95%99%E7%A8%8B/"
             id="categoriesE69599E7A88B"
-            ><div class='name'>教程</div><div class='badge'>(14)</div></a></li>
+            ><div class='name'>教程</div><div class='badge'>(18)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E6%95%99%E7%A8%8B/Blog/" href="/categories/%E6%95%99%E7%A8%8B/Blog/"
@@ -1103,6 +1117,11 @@ Transaction
             title="/categories/%E6%95%99%E7%A8%8B/GitHub/" href="/categories/%E6%95%99%E7%A8%8B/GitHub/"
             id="categoriesE69599E7A88BGitHub"
             ><div class='name'>GitHub</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/"
+            id="categoriesE69599E7A88BJavaE6BA90E7A081"
+            ><div class='name'>Java源码</div><div class='badge'>(4)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E6%95%99%E7%A8%8B/Jedis/" href="/categories/%E6%95%99%E7%A8%8B/Jedis/"
@@ -1191,7 +1210,7 @@ Transaction
 
 
     <div class='content'>
-      <a href="/tags/ACID/" style="font-size: 14px; color: #999">ACID</a> <a href="/tags/Database/" style="font-size: 24px; color: #555">Database</a> <a href="/tags/Docker/" style="font-size: 17.33px; color: #828282">Docker</a> <a href="/tags/Git/" style="font-size: 24px; color: #555">Git</a> <a href="/tags/GitHub/" style="font-size: 14px; color: #999">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/Index/" style="font-size: 20.67px; color: #6c6c6c">Index</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/Jedis/" style="font-size: 14px; color: #999">Jedis</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MVCC/" style="font-size: 14px; color: #999">MVCC</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Redis/" style="font-size: 17.33px; color: #828282">Redis</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/Transaction/" style="font-size: 20.67px; color: #6c6c6c">Transaction</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 20.67px; color: #6c6c6c">事务</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">优化</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 17.33px; color: #828282">命令</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 14px; color: #999">基础</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">服务器</a> <a href="/tags/%E7%B4%A2%E5%BC%95/" style="font-size: 20.67px; color: #6c6c6c">索引</a> <a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 17.33px; color: #828282">问题</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 20.67px; color: #6c6c6c">面试</a>
+      <a href="/tags/ACID/" style="font-size: 14px; color: #999">ACID</a> <a href="/tags/Database/" style="font-size: 24px; color: #555">Database</a> <a href="/tags/Docker/" style="font-size: 17.33px; color: #828282">Docker</a> <a href="/tags/Git/" style="font-size: 24px; color: #555">Git</a> <a href="/tags/GitHub/" style="font-size: 14px; color: #999">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/Index/" style="font-size: 20.67px; color: #6c6c6c">Index</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/Java%E6%BA%90%E7%A0%81/" style="font-size: 24px; color: #555">Java源码</a> <a href="/tags/Jedis/" style="font-size: 14px; color: #999">Jedis</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MVCC/" style="font-size: 14px; color: #999">MVCC</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Redis/" style="font-size: 17.33px; color: #828282">Redis</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/ThreadPoolExecutor/" style="font-size: 24px; color: #555">ThreadPoolExecutor</a> <a href="/tags/Transaction/" style="font-size: 20.67px; color: #6c6c6c">Transaction</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 20.67px; color: #6c6c6c">事务</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">优化</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 17.33px; color: #828282">命令</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 14px; color: #999">基础</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">服务器</a> <a href="/tags/%E7%B4%A2%E5%BC%95/" style="font-size: 20.67px; color: #6c6c6c">索引</a> <a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 17.33px; color: #828282">问题</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 20.67px; color: #6c6c6c">面试</a>
     </div>
   </section>
 

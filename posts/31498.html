@@ -5,10 +5,6 @@
   <!-- SEO相关 -->
   
     
-      
-        <meta name="robots" content="index,follow">
-      
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -23,7 +19,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>技术小站</title>
+  <title>Java源码-ThreadPoolExecutor-01成员变量 - 技术小站</title>
+  
+    <meta name="keywords" content="Java源码,ThreadPoolExecutor">
   
 
   
@@ -60,7 +58,7 @@
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -331,7 +329,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: ;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -440,7 +438,7 @@
   </div>
 </div>
 
-          <div id="scroll-down" style="display: ;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
         </div>
     
   
@@ -451,609 +449,270 @@
         
 
 <div class='l_main'>
-  
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/12443.html">
-        Java源码-ThreadPoolExecutor-03重要方法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        ThreadPoolExecutor中重要方法任务提交主逻辑：execute()
-  execute()源码
-  
-  public void execute(Runnable command) {
-      if (command == null)
-          throw new NullPointerException();
-      /*
-       * Proceed ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/12443.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
   
-  
-  
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title" >
-      <a href="/posts/52671.html">
-        Java源码-ThreadPoolExecutor-02构造函数
-      </a>
-    </h2>
-  
-  <div class='md'>
     
-      
-        ThreadPoolExecutor中的构造函数ThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue)ThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue, RejectedExecutionHandler)ThreadPoolExecutor(int, int, ...
-      
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/52671.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/31498.html">
+      <h1 class="title">
         Java源码-ThreadPoolExecutor-01成员变量
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        ThreadPoolExecutor中的重要成员变量AtomicInteger ctl  1private final AtomicInteger ctl = new AtomicInteger(ctlOf(RUNNING, 0));
-  AtomicInteger类型的ctl代表了ThreadPoolExecutor中的控制状态，它是一个复核类型的成员变量，是一个原子整数，借助高低位包装了...
-      
-    
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>Hutao</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2021-03-09</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年3月9日</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Java源码-ThreadPoolExecutor-01成员变量" data-path="/posts/31498.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <h4 id="ThreadPoolExecutor中的重要成员变量"><a href="#ThreadPoolExecutor中的重要成员变量" class="headerlink" title="ThreadPoolExecutor中的重要成员变量"></a>ThreadPoolExecutor中的重要成员变量</h4><h5 id="AtomicInteger-ctl"><a href="#AtomicInteger-ctl" class="headerlink" title="AtomicInteger ctl"></a>AtomicInteger <code>ctl</code></h5>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> AtomicInteger ctl = <span class="keyword">new</span> AtomicInteger(ctlOf(RUNNING, <span class="number">0</span>));</span><br></pre></td></tr></table></figure>
+<p>  AtomicInteger类型的ctl代表了ThreadPoolExecutor中的控制状态，它是一个复核类型的成员变量，是一个原子整数，借助高低位包装了两个概念：</p>
+<p>  (1) <code>workerCount</code>：线程池中当前活动的线程数量，占据ctl的<font color=blue><strong><em>低29位</em></strong></font>；</p>
+<p>  (2) <code>runState</code>：线程池运行状态，占据<code>ctl</code>的<font color=red><strong>高3位</strong></font>，有<code>RUNNING</code>、<code>SHUTDOWN</code>、<code>STOP</code>、<code>TIDYING</code>、<code>TERMINATED</code>五种状态。</p>
+<blockquote>
+<p>如下，红色为高3位，蓝色为低29位，共32位<br><font color=red>000</font> <font color=blue><strong><em>00000 00000000 00000000 00000000</em></strong></font></p>
+</blockquote>
+<p>  <strong>workerCount</strong><br>  workerCount 代表线程池中当前活动的线程数量，每当活跃线程数增加或减少时，<code>ctl</code>直接做相应数目的增减即可，十分方便。<br>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> COUNT_BITS = Integer.SIZE - <span class="number">3</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CAPACITY   = (<span class="number">1</span> &lt;&lt; COUNT_BITS) - <span class="number">1</span>;</span><br></pre></td></tr></table></figure><br>  <code>COUNT_BITS</code>: 代表了workerCount所占位数为29 （<code>Integer.SIZE</code>为32）<br>  <code>CAPACITY</code>: 代表workerCount最大值为536870911 (<code>(2^29)-1</code>)  </p>
+<blockquote>
+<p>位运算：1 &lt;&lt; COUNT_BITS<br>1 = 2^0 为  00000000 00000000 00000000 00000001<br>左移29位结果如下<br>00000000 00000000 00000000 00000001 –&gt; 001 0000 00000000 00000000 00000000</p>
+</blockquote>
+<p>  <strong>runState</strong><br>  runState 代表线程池运行状态：<code>RUNNING</code>(-536870912)、<code>SHUTDOWN</code>(0)、<code>STOP</code>(536870912)、<code>TIDYING</code>(1073741824)、<code>TERMINATED</code>(1610612736)<br>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// runState is stored in the high-order bits</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> RUNNING    = -<span class="number">1</span> &lt;&lt; COUNT_BITS; <span class="comment">// -1在Java底层是由32个1表示的，左移29为：111 00000 00000000 00000000 00000000</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> SHUTDOWN   =  <span class="number">0</span> &lt;&lt; COUNT_BITS; <span class="comment">// 0在Java底层是由32个0表示的，左移29为：000 00000 00000000 00000000 00000000</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> STOP       =  <span class="number">1</span> &lt;&lt; COUNT_BITS; <span class="comment">// 1在Java底层是由前31个0加1个1表示的，左移29为：001 00000 00000000 00000000 00000000</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TIDYING    =  <span class="number">2</span> &lt;&lt; COUNT_BITS; <span class="comment">// 2在Java底层是由前30个0加1个10表示的，左移29为：010 00000 00000000 00000000 00000000</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TERMINATED =  <span class="number">3</span> &lt;&lt; COUNT_BITS; <span class="comment">// 3在Java底层是由前30个0加1个11表示的，左移29为：011 00000 00000000 00000000 00000000</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>RUNNING</code>(-536870912)：接受新任务，并处理队列任务</li>
+<li><code>SHUTDOWN</code>(0)：不接受新任务，但会处理队列任务</li>
+<li><code>STOP</code>(536870912)：不接受新任务，不会处理队列任务，而且会中断正在处理过程中的任务</li>
+<li><code>TIDYING</code>(1073741824)：所有的任务已结束，workerCount为0，线程过渡到TIDYING状态，将会执行terminated()钩子方法</li>
+<li><code>TERMINATED</code>(1610612736)：terminated()方法已经完成</li>
+</ul>
+<p>  <strong>NOTE：状态值大小关系：RUNNING &lt; SHUTDOWN &lt; STOP &lt; TIDYING&lt; TERMINATED</strong></p>
+<p>  <strong><em>状态转化：</em></strong></p>
+<ol>
+<li>RUNNING -&gt; SHUTDOWN：调用shutdown()方法后，或者线程池实现了finalize方法，在里面调用了shutdown方法，即隐式调用；</li>
+<li>(RUNNING or SHUTDOWN) -&gt; STOP：调用shutdownNow()方法后；</li>
+<li>SHUTDOWN -&gt; TIDYING：线程池和队列均为空时；</li>
+<li>STOP -&gt; TIDYING：线程池为空时；</li>
+<li>TIDYING -&gt; TERMINATED：terminated()钩子方法完成时。</li>
+</ol>
+<p>  <strong>runStateOf()</strong><br>   <code>runStateOf(int c)</code>运行状态<br>   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">runStateOf</span><span class="params">(<span class="keyword">int</span> c)</span>     </span>&#123; <span class="keyword">return</span> c &amp; ~CAPACITY; &#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>~ 是按位取反的意思，CAPACITY表示的是高位的3个0，和低位的29个1，而~CAPACITY则表示高位的3个1，低位的29个0<br>~CAPACITY: 111 0000 00000000 00000000 00000000<br>&amp; 是与操作，入参c执行按位与操作，即高3位保持原样，低29位全部设置为0，也就获取了线程池的运行状态runState。</p>
+</blockquote>
+<p>  <strong>workerCountOf()</strong><br>  <code>workerCountOf(int c)</code>计算线程池当前线程数<br>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">workerCountOf</span><span class="params">(<span class="keyword">int</span> c)</span>  </span>&#123; <span class="keyword">return</span> c &amp; CAPACITY; &#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>~ 是按位取反的意思，CAPACITY表示的是高位的3个0，和低位的29个1，而~CAPACITY则表示高位的3个1，低位的29个0<br>~CAPACITY: 111 0000 00000000 00000000 00000000<br>&amp; 是与操作，入参c执行按位与操作，即高3位保持原样，低29位全部设置为0，也就获取了线程池的运行状态runState。</p>
+</blockquote>
+<p>  <strong>ctlOf()</strong><br>  <code>ctlOf(int rs, int wc)</code>初始化ctl<br>  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">ctlOf</span><span class="params">(<span class="keyword">int</span> rs, <span class="keyword">int</span> wc)</span> </span>&#123; <span class="keyword">return</span> rs | wc; &#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>rs表示线程池运行状态runState，其是高3位有值，低29位全部为0的int<br>wc则代表线程池中有效线程的数量workerCount，其为高3位全部为0，而低29位有值得int<br>| 是 <strong>或</strong> 操作，，即用runState的高3位，workerCount的低29位填充的数字，而默认传入的runState、workerCount分别为RUNNING和0</p>
+</blockquote>
+<h5 id="BlockingQueue-lt-Runnable-gt-workQueue"><a href="#BlockingQueue-lt-Runnable-gt-workQueue" class="headerlink" title="BlockingQueue&lt;Runnable&gt; workQueue"></a><code>BlockingQueue&lt;Runnable&gt; workQueue</code></h5><p>   workQueue是用于持有任务并将其转换成工作线程worker的队列；</p>
+<h5 id="HashSet-lt-Worker-gt-workers"><a href="#HashSet-lt-Worker-gt-workers" class="headerlink" title="HashSet&lt;Worker&gt; workers"></a><code>HashSet&lt;Worker&gt; workers</code></h5><p>   workers是包含线程池中所有工作线程worker的集合，仅仅当拥有mainLock锁时才能访问它；</p>
+<h5 id="long-completedTaskCount"><a href="#long-completedTaskCount" class="headerlink" title="long completedTaskCount"></a><code>long completedTaskCount</code></h5><p>   completedTaskCount是已完成任务的计数器，只有在worker线程的终止，仅仅当拥有mainLock锁时才能访问它；</p>
+<h5 id="volatile-ThreadFactory-threadFactory"><a href="#volatile-ThreadFactory-threadFactory" class="headerlink" title="volatile ThreadFactory threadFactory"></a><code>volatile ThreadFactory threadFactory</code></h5><p>   创建新线程的工厂类；</p>
+<h5 id="volatile-RejectedExecutionHandler-handler"><a href="#volatile-RejectedExecutionHandler-handler" class="headerlink" title="volatile RejectedExecutionHandler handler"></a><code>volatile RejectedExecutionHandler handler</code></h5><p>   执行过程中shutdown时调用的handler；</p>
+<h5 id="volatile-long-keepAliveTime"><a href="#volatile-long-keepAliveTime" class="headerlink" title="volatile long keepAliveTime"></a><code>volatile long keepAliveTime</code></h5><p>   空闲线程等待工作的超时时间（纳秒），即空闲线程存活时间；</p>
+<h5 id="volatile-boolean-allowCoreThreadTimeOut"><a href="#volatile-boolean-allowCoreThreadTimeOut" class="headerlink" title="volatile boolean allowCoreThreadTimeOut"></a><code>volatile boolean allowCoreThreadTimeOut</code></h5><p>   默认值为false，如果为false，core线程在空闲时依然存活；如果为true，则core线程等待工作，直到时间超时至keepAliveTime；</p>
+<h5 id="volatile-int-corePoolSize"><a href="#volatile-int-corePoolSize" class="headerlink" title="volatile int corePoolSize"></a><code>volatile int corePoolSize</code></h5><p>   核心线程池大小，保持存活的工作线程的最小数目，当小于corePoolSize时，会直接启动新的一个线程来处理任务，而不管线程池中是否有空闲线程；</p>
+<h5 id="volatile-int-maximumPoolSize"><a href="#volatile-int-maximumPoolSize" class="headerlink" title="volatile int maximumPoolSize"></a><code>volatile int maximumPoolSize</code></h5><p>   线程池最大大小，也就是线程池中线程的最大数量。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/31498.html'>
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://hutaozhang.github.io/posts/31498.html>https://hutaozhang.github.io/posts/31498.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-03-09T21:39:51+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年3月9日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/36639.html">
-        Java源码-ThreadPoolExecuto
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java%E6%BA%90%E7%A0%81/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java源码</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ThreadPoolExecutor/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ThreadPoolExecutor</p></a></div>
+
+
+        
       
         
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://hutaozhang.github.io/posts/31498.html&title=Java源码-ThreadPoolExecutor-01成员变量 - 技术小站&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://hutaozhang.github.io/posts/31498.html&title=Java源码-ThreadPoolExecutor-01成员变量 - 技术小站&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://hutaozhang.github.io/posts/31498.html&title=Java源码-ThreadPoolExecutor-01成员变量 - 技术小站&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/posts/52671.html'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Java源码-ThreadPoolExecutor-02构造函数</p>
+          <p class='content'>ThreadPoolExecutor中的构造函数ThreadPoolExecutor(int, int, long, TimeUnit, BlockingQueue)ThreadPoolExec...</p>
+        </a>
+      
+      
+        <a class='next' href='/posts/36639.html'>
+          <p class='title'>Java源码-ThreadPoolExecuto<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
 别说话，开抄！！！先赞后看，参考一下大神文章：ThreadPoolExecutor源码分析（一）：重要成员变量深入理解Java线程池：ThreadPoolExecutor
 
-ThreadPoolExecutor Demo  没看过源码，写个Demo压压惊~  123456789101112131415161718192021222324252627282930313233343536373...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/">Java源码</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/36639.html'>
-            阅读全文
-          </a>
-        </div>
+ThreadPoo...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/25491.html">
-        面试 Database 基础
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        为什么使用数据库？
-数据保存在内存
-优点： 存取速度快
-缺点： 数据不能永久保存
-
-数据保存在文件
-优点： 数据永久保存
-缺点：1）速度比内存操作慢，频繁的IO操作。2）查询数据不方便
-
-数据保存在数据库
-1）数据永久保存
-2）使用SQL语句，查询方便效率高。
-3）管理数据方便
+  </article>
 
 
-什么是SQL？  结构化查询语言(Structured Query Language)简称SQL，是一种数据库...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/">Database</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/25491.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/40486.html">
-        Spring 事务
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        [TOC]
-Spring的事务管理  Spring事务本质是对数据库事务的支持，如果数据库不支持事务（例如MySQL的MyISAM引擎不支持事务），则Spring事务也不会生效。
-  Spring 既支持编程式事务管理, 也支持声明式的事务管理.
-
-编程式事务管理将事务管理代码嵌入到业务方法中来控制事务的提交和回滚。在编程式管理事务时, 必须在每个事务操作中包含额外的事务管理代码。
 
 
-声明...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Spring/">Spring</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/40486.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/63394.html">
-        数据库
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        数据库事务Database 事务  
-
-
-Database 事务ACID特性  
-
-Spring 事务  
-
-面试 MySQL 事务
-
-索引MySQL 索引
-
-
-面试 MySQL 索引
-
-
-MVCC面试 MySQL MVCC
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-07</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/63394.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/58986.html">
-        MySQL 索引
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        一、索引概述1. 简介2. 索引的原理  MySQL支持诸多存储引擎，而各种存储引擎对索引的支持也各不相同，因此MySQL数据库支持多种索引类型，如BTree索引，B+Tree索引，哈希索引，全文索引等等，
-哈希索引  只有memory（内存）存储引擎支持哈希索引，哈希索引用索引列的值计算该值的hashCode，然后在hashCode相应的位置存执该值所在行数据的物理位置，因为使用散列算法，...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/MySQL/">MySQL</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/58986.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/28156.html">
-        Database 索引
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        一、 数据库索引数据库索引定义  索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。
-  简而言之： 索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。
-数据库索引类别  数据库索引好比是一本书前面的目录，能加快数...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/Database/">Database</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/28156.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/2460.html">
-        面试 MySQL MVCC
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        一、前提概要
-MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。MVCC是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。
-
-什么是MVCC?  MVCC在MySQL InnoDB中的实现主要是为了提高数据库并发性能，用更好的方式去处理读-写冲突，做到即使有读写冲突时，也能做到不加锁，非阻...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-03-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/">Database</a><span class="sep"></span><a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/">MySQL</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/2460.html'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 3
-        </p>
-        
-          <a class="next" rel="next" href="/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
 
 
 </div>
@@ -1063,202 +722,22 @@ MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <div class='avatar'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/hutaozhang/CDN/blog/images/hutao.jpg'/>
-        </div>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">技术小站</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://github.com/hutaozhang"
-              class="social fab fa-github waves-effect waves-button flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:2449717133@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="http://wpa.qq.com/msgrd?v=3&amp;amp;uin=2273902448&amp;amp;site=qq&amp;amp;menu=yes"
-              class="social fab fa-qq waves-effect waves-button flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%99%E7%A8%8B/" href="/categories/%E6%95%99%E7%A8%8B/"
-            id="categoriesE69599E7A88B"
-            ><div class='name'>教程</div><div class='badge'>(18)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Blog/" href="/categories/%E6%95%99%E7%A8%8B/Blog/"
-            id="categoriesE69599E7A88BBlog"
-            ><div class='name'>Blog</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Database/" href="/categories/%E6%95%99%E7%A8%8B/Database/"
-            id="categoriesE69599E7A88BDatabase"
-            ><div class='name'>Database</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Git/" href="/categories/%E6%95%99%E7%A8%8B/Git/"
-            id="categoriesE69599E7A88BGit"
-            ><div class='name'>Git</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/GitHub/" href="/categories/%E6%95%99%E7%A8%8B/GitHub/"
-            id="categoriesE69599E7A88BGitHub"
-            ><div class='name'>GitHub</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/" href="/categories/%E6%95%99%E7%A8%8B/Java%E6%BA%90%E7%A0%81/"
-            id="categoriesE69599E7A88BJavaE6BA90E7A081"
-            ><div class='name'>Java源码</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Jedis/" href="/categories/%E6%95%99%E7%A8%8B/Jedis/"
-            id="categoriesE69599E7A88BJedis"
-            ><div class='name'>Jedis</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Linux/" href="/categories/%E6%95%99%E7%A8%8B/Linux/"
-            id="categoriesE69599E7A88BLinux"
-            ><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/MySQL/" href="/categories/%E6%95%99%E7%A8%8B/MySQL/"
-            id="categoriesE69599E7A88BMySQL"
-            ><div class='name'>MySQL</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Ninx/" href="/categories/%E6%95%99%E7%A8%8B/Ninx/"
-            id="categoriesE69599E7A88BNinx"
-            ><div class='name'>Ninx</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Redis/" href="/categories/%E6%95%99%E7%A8%8B/Redis/"
-            id="categoriesE69599E7A88BRedis"
-            ><div class='name'>Redis</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%99%E7%A8%8B/Spring/" href="/categories/%E6%95%99%E7%A8%8B/Spring/"
-            id="categoriesE69599E7A88BSpring"
-            ><div class='name'>Spring</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%97%AE%E9%A2%98/" href="/categories/%E9%97%AE%E9%A2%98/"
-            id="categoriesE997AEE9A298"
-            ><div class='name'>问题</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E9%97%AE%E9%A2%98/Git/" href="/categories/%E9%97%AE%E9%A2%98/Git/"
-            id="categoriesE997AEE9A298Git"
-            ><div class='name'>Git</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E9%97%AE%E9%A2%98/Hexo/" href="/categories/%E9%97%AE%E9%A2%98/Hexo/"
-            id="categoriesE997AEE9A298Hexo"
-            ><div class='name'>Hexo</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%9D%A2%E8%AF%95/" href="/categories/%E9%9D%A2%E8%AF%95/"
-            id="categoriesE99DA2E8AF95"
-            ><div class='name'>面试</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E9%9D%A2%E8%AF%95/Database/" href="/categories/%E9%9D%A2%E8%AF%95/Database/"
-            id="categoriesE99DA2E8AF95Database"
-            ><div class='name'>Database</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/" href="/categories/%E9%9D%A2%E8%AF%95/Database/MySQL/"
-            id="categoriesE99DA2E8AF95DatabaseMySQL"
-            ><div class='name'>MySQL</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E9%9D%A2%E8%AF%95/MySQL/" href="/categories/%E9%9D%A2%E8%AF%95/MySQL/"
-            id="categoriesE99DA2E8AF95MySQL"
-            ><div class='name'>MySQL</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#ThreadPoolExecutor%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="toc-text">ThreadPoolExecutor中的重要成员变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#AtomicInteger-ctl"><span class="toc-text">AtomicInteger ctl</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#BlockingQueue-lt-Runnable-gt-workQueue"><span class="toc-text">BlockingQueue&lt;Runnable&gt; workQueue</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HashSet-lt-Worker-gt-workers"><span class="toc-text">HashSet&lt;Worker&gt; workers</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#long-completedTaskCount"><span class="toc-text">long completedTaskCount</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#volatile-ThreadFactory-threadFactory"><span class="toc-text">volatile ThreadFactory threadFactory</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#volatile-RejectedExecutionHandler-handler"><span class="toc-text">volatile RejectedExecutionHandler handler</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#volatile-long-keepAliveTime"><span class="toc-text">volatile long keepAliveTime</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#volatile-boolean-allowCoreThreadTimeOut"><span class="toc-text">volatile boolean allowCoreThreadTimeOut</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#volatile-int-corePoolSize"><span class="toc-text">volatile int corePoolSize</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#volatile-int-maximumPoolSize"><span class="toc-text">volatile int maximumPoolSize</span></a></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/ACID/" style="font-size: 14px; color: #999">ACID</a> <a href="/tags/Database/" style="font-size: 24px; color: #555">Database</a> <a href="/tags/Docker/" style="font-size: 17.33px; color: #828282">Docker</a> <a href="/tags/Git/" style="font-size: 24px; color: #555">Git</a> <a href="/tags/GitHub/" style="font-size: 14px; color: #999">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20.67px; color: #6c6c6c">Hexo</a> <a href="/tags/Index/" style="font-size: 20.67px; color: #6c6c6c">Index</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/Java%E6%BA%90%E7%A0%81/" style="font-size: 24px; color: #555">Java源码</a> <a href="/tags/Jedis/" style="font-size: 14px; color: #999">Jedis</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/MVCC/" style="font-size: 14px; color: #999">MVCC</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Redis/" style="font-size: 17.33px; color: #828282">Redis</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/ThreadPoolExecutor/" style="font-size: 24px; color: #555">ThreadPoolExecutor</a> <a href="/tags/Transaction/" style="font-size: 20.67px; color: #6c6c6c">Transaction</a> <a href="/tags/%E4%BA%8B%E5%8A%A1/" style="font-size: 20.67px; color: #6c6c6c">事务</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">优化</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 17.33px; color: #828282">命令</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 14px; color: #999">基础</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 14px; color: #999">服务器</a> <a href="/tags/%E7%B4%A2%E5%BC%95/" style="font-size: 20.67px; color: #6c6c6c">索引</a> <a href="/tags/%E9%97%AE%E9%A2%98/" style="font-size: 17.33px; color: #828282">问题</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 20.67px; color: #6c6c6c">面试</a>
-    </div>
-  </section>
-
-
-  
 
   
 
@@ -1274,14 +753,14 @@ MVCCMVCC，全称Multi-Version Concurrency Control，即多版本并发控制。
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Java源码-ThreadPoolExecutor-01成员变量";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 
